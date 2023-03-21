@@ -5,3 +5,8 @@ img{
     object-fit: cover;
     object-position: center;
 }
+
+input::placeholder,
+textarea::placeholder{
+    font-size: 0.8rem;
+}

@@ -43,7 +43,8 @@
                 </tbody>
             </table>
             <div class="pt-4">
-                <a class="btn btn-success" href="">Aggiungi nuovo viaggio</a>
+                <a class="btn btn-success"
+                href="{{ route('admin.projects.create') }}">Aggiungi nuovo viaggio</a>
             </div>
         </div>
     </div>
