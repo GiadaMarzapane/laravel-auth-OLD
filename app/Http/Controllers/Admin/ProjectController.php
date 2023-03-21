@@ -51,7 +51,7 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
-        dd($request);
+        dd($request->all());
     }
 
     /**
