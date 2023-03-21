@@ -28,7 +28,7 @@
                         <td>{{ $element->title }}</td>
                         <td>{{ $element->date }}</td>
                         <td>
-                            <a class="btn btn-primary" href="#">
+                            <a class="btn btn-primary" href="{{ route('admin.projects.show', $element->id) }}">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
                             <a class="btn btn-warning" href="#">
