@@ -10,7 +10,7 @@
                     {{ session('status') }}
                 </div>
                 @endif
-                <h2>I miei viaggi</h2>
+                <h2 class="pb-4">I miei viaggi &#128747;</h2>
             </div>
             <table class="table table-striped">
                 <thead>
@@ -42,6 +42,9 @@
                     @endforeach
                 </tbody>
             </table>
+            <div class="pt-4">
+                <a class="btn btn-success" href="">Aggiungi nuovo viaggio</a>
+            </div>
         </div>
     </div>
 </div>
