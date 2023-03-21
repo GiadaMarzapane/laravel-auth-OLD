@@ -18,6 +18,7 @@
                     class="form-control"
                     id="title"
                     name="title"
+                    maxlength="100"
                     placeholder="Inserisci titolo..."
                     aria-describedby="titleHelp"
                     required>
@@ -71,7 +72,7 @@
 
                 {{-- --------------------FINE INPUT-------------------- --}}
 
-                <button type="submit" class="btn btn-success">Crea</button>
+                <button type="submit" class="btn btn-success">Crea viaggio</button>
             </form>
         </div>
     </div>
