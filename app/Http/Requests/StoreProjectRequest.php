@@ -4,6 +4,8 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+// Helpers
+use Illuminate\Support\Str;
 class StoreProjectRequest extends FormRequest
 {
     /**
@@ -23,8 +25,11 @@ class StoreProjectRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
+            return [
+            'title' => 'required|unique:projects,title|max:100',
+            'content' => 'required|max:100',
+            'date' => 'required',
+            'photo_link' =>'max:255'
         ];
     }
 }

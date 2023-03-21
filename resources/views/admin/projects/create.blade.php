@@ -7,6 +7,19 @@
             <h2 class="mb-4">
                 Aggiungi nuovo viaggio
             </h2>
+            {{-- SEZIONE ERRORI --}}
+            <section>
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+            </section>
+            {{-- FORM CREAZIONE NUOVO VIAGGIO - METODO POST E ACTION CON ROUTE A STORE --}}
             <form action="{{ route('admin.projects.store') }}" method="POST">
                 @csrf
                 {{-- INPUT PER TITLE --}}
@@ -31,7 +44,7 @@
                     <label for="date" class="form-label">Anno viaggio:
                         <span class="text-danger">*</span>
                     </label>
-                    <input type="number"
+                    <input type="text"
                     class="form-control"
                     id="date"
                     name="date"
@@ -65,8 +78,8 @@
                     </label>
                     <input type="text"
                     class="form-control"
-                    id="phpto_link"
-                    name="phpto_link"
+                    id="photo_link"
+                    name="photo_link"
                     placeholder="Inserisci link...">
                 </div>
 

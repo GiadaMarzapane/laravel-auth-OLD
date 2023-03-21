@@ -8,6 +8,9 @@ use App\Models\Project;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 
+// Helper
+use Illuminate\Support\Str;
+
 class ProjectController extends Controller
 {
     /**
@@ -51,7 +54,22 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
-        dd($request->all());
+        // dd($request->all());
+
+        $data = $request->validated();
+
+        // creo variabile per lo slug del title
+        $slug = Str::slug($data['title']);
+
+        $newProject = Project::create([
+            'title'=> $data['title'],
+            'slug'=> $slug,
+            'content'=> $data['content'],
+            'date'=> $data['date'],
+            'photo_link'=> $data['photo_link']
+        ]);
+
+        return redirect()->route('admin.projects.show', $newProject->id);
     }
 
     /**
