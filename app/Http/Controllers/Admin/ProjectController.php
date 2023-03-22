@@ -69,7 +69,7 @@ class ProjectController extends Controller
             'photo_link'=> $data['photo_link']
         ]);
 
-        return redirect()->route('admin.projects.show', $newProject->id);
+        return redirect()->route('admin.projects.show', $newProject->id)->with('status', 'Viaggio aggiunto con successo!');;
     }
 
     /**
