@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="container-fluid mt-4">
+<div class="container-fluid my-4">
     <div class="row justify-content-center">
         <div class="col">
             <h2 class="mb-4">
