@@ -44,12 +44,14 @@
                     <label for="date" class="form-label">Anno viaggio:
                         <span class="text-danger">*</span>
                     </label>
-                    <input type="text"
+                    <input type="number"
                     class="form-control"
                     id="date"
                     name="date"
                     placeholder="Inserisci anno..."
                     aria-describedby="dateHelp"
+                    min="1901"
+                    max="2155"
                     required>
                     <div id="dateHelp" class="form-text">
                         <span class="text-danger">*</span> Campo obbligatorio
