@@ -31,7 +31,7 @@
                             <a class="btn btn-primary" href="{{ route('admin.projects.show', $element->id) }}">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
-                            <a class="btn btn-warning" href="#">
+                            <a class="btn btn-warning" href="{{ route('admin.projects.edit', $element->id) }}">
                                 <i class="fa-solid fa-pencil"></i>
                             </a>
                             <a class="btn btn-dark" href="#">

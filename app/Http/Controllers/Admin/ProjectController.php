@@ -80,7 +80,7 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        //
+        return view('admin.projects.edit', compact('project'));
     }
 
     /**
@@ -92,7 +92,20 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
-        //
+        $data = $request->validated();
+
+        // creo variabile per lo slug del title
+        $slug = Str::slug($data['title']);
+
+        $project->update([
+            'title' => $data['title'],
+            'slug' => $slug,
+            'content' => $data['content'],
+            'date' => $data['date'],
+            'photo_link' => $data['photo_link']
+        ]);
+
+        return redirect()->route('admin.projects.show', $project->id)->with('status', 'Viaggio aggiornato!');;
     }
 
     /**
